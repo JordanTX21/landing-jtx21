@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Force Vite HMR to rebuild tailwind config */
+  body {
+    @apply bg-dark-900 text-slate-300;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-dark-800/60 backdrop-blur-md border border-slate-700/50;
+  }
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-500;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
