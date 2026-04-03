@@ -1,40 +1,44 @@
-import type { Experience } from '@/types'
+import type { Experience } from "@/types";
 
 export const experiences: Experience[] = [
   {
-    title: 'Senior Backend Engineer & Full Stack',
-    company: 'Logistics & Mapping System',
-    date: '2023 - Present',
-    description: 'Developed critical backend infrastructure with an API-first mindset. Integrated dynamic mapping and routing for an enterprise application while refactoring monolithic legacy code.',
+    title: "Tech Lead, Backend Engineer & Full Stack",
+    company: "Larael S.A.C",
+    date: "2025 - Present",
+    description:
+      "Leading technical decisions and backend architecture while contributing as a full stack developer. Focused on scalability, code quality, and mentoring developers within the team.",
     highlights: [
-      'Engineered Mapbox integrations for real-time order tracking and warehouse routing logic.',
-      'Secured REST endpoints via decoupled authentication and strict input parameter masking.',
-      'Migrated complex legacy Vue 2 UI into manageable Vue 3 Composition API components.'
+      "Defined backend architecture standards and best practices for Laravel-based systems.",
+      "Led refactoring initiatives for legacy systems into modular and scalable structures.",
+      "Mentored developers and improved development workflows and code review processes.",
     ],
-    tags: ['Laravel 10', 'Vue 3', 'Pinia', 'Mapbox', 'REST']
+    tags: ["Laravel", "Vue 3", "Architecture", "API Design", "Leadership"],
   },
   {
-    title: 'Full Stack & Mobile Developer',
-    company: 'Fintech / ERP Implementations',
-    date: '2021 - 2023',
-    description: 'Architected robust custom flows inside ERPNext and built hybrid apps with Flutter to handle field operations, ensuring total syncing and accurate payment generation.',
+    title: "Full Stack & Mobile Developer",
+    company: "Larael S.A.C",
+    date: "2023 - 2025",
+    description:
+      "Architected robust custom flows inside ERPNext and built hybrid apps with Flutter to handle field operations, ensuring total syncing and accurate payment generation.",
     highlights: [
-      'Extended Frappe/ERPNext endpoints for custom business logic, bypassing standard monolithic views.',
-      'Created a Flutter Hybrid app that handled hardware permissions safely and generated QR payment codes.',
-      'Implemented robust form handling on frontend using Vee Validate with complex async rules.'
+      "Built and maintained APIs with Laravel following API-first principles.",
+      "Developed frontend applications using Vue 2 and Vue 3 with Composition API.",
+      "Created mobile applications with Flutter for operational and business processes.",
+      "Integrated ERPNext (Frappe) for custom business workflows and automation.",
     ],
-    tags: ['ERPNext', 'Python/Frappe', 'Flutter', 'WebSockets', 'Vue 2']
+    tags: ["Laravel", "Vue 2", "Vue 3", "Flutter", "ERPNext", "REST"],
   },
   {
-    title: 'Backend Developer',
-    company: 'Legacy System Modernization',
-    date: '2019 - 2021',
-    description: 'Maintained and scaled high-traffic systems running on older frameworks while establishing clean pathways to modern standards.',
+    title: "Backend Developer",
+    company: "Overskull S.A.C",
+    date: "2021 - 2023",
+    description:
+      "Maintained and scaled high-traffic systems running on older frameworks while establishing clean pathways to modern standards.",
     highlights: [
-      'Mastered Laravel 5.8 Query Builder and Eloquent to optimize complex aggregations by 40%.',
-      'Configured secure cross-platform session sharing using encrypted cookies.',
-      'Established foundational email templates and mailing services via queues.'
+      "Maintained and optimized legacy logistics systems with high transactional load.",
+      "Improved performance of database queries using Laravel Query Builder and MySQL optimizations.",
+      "Implemented integrations and enhancements in existing monolithic systems.",
     ],
-    tags: ['Laravel 5.8', 'MySQL', 'Queues', 'Session Mgmt']
-  }
-]
+    tags: ["PHP MVC", "Laravel 5.8", "MySQL", "Legacy Systems"],
+  },
+];

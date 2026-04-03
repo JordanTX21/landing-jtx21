@@ -17,3 +17,10 @@ export interface SkillCategory {
   icon: any // Vue component representation
   items: SkillItem[]
 }
+
+export interface Education {
+  title: string
+  institution: string
+  date: string
+  description: string
+}

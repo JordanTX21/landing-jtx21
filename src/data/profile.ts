@@ -1,10 +1,23 @@
 export const profileData = {
-  name: 'Jordan Noblejas',
+  name: "Jordan Noblejas",
   age: 26,
-  role: 'Senior Full Stack Developer',
-  availability: 'Available for new opportunities',
-  email: 'jordannoblejas@gmail.com',
-  github: 'https://github.com/JordanTX21',
-  linkedin: 'https://www.linkedin.com/in/jordan-noblejas-61b628370/',
-  description: 'Senior Full Stack Developer with 5+ years of experience in high-performance backend architectures. Specialist in Laravel and Vue.js, focused on building scalable APIs and resilient systems for enterprise-grade applications.'
-}
+  role: "Tech Lead | Backend Engineer | Full Stack",
+  availability: "Open to impactful and scalable system challenges",
+  email: "jordannoblejas@gmail.com",
+  github: "https://github.com/JordanTX21",
+  linkedin: "https://www.linkedin.com/in/jordan-noblejas-61b628370/",
+  description: `Backend Engineer and Tech Lead with 5+ years of experience designing and evolving high-impact systems in logistics and ERP environments. Specialized in Laravel and Vue.js, focused on building scalable APIs, refactoring legacy systems, and leading technical decisions that improve performance, maintainability, and team velocity.`,
+
+  tagline:
+    "Designing systems that scale, evolve, and don’t break under pressure.",
+
+  philosophy: `Scalable. Maintainable. Built to last.`,
+
+  strengths: [
+    "API Design & System Architecture",
+    "Legacy System Refactoring",
+    "High-Load Backend Optimization",
+    "ERP & Business Logic Modeling",
+    "Technical Leadership & Mentoring",
+  ],
+};
