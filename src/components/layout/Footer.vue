@@ -1,9 +1,12 @@
 <template>
   <footer class="bg-surface-lowest border-t border-white/5 py-16 relative overflow-hidden">
-    <div class="container mx-auto px-6 lg:px-12 relative z-10 flex flex-col md:flex-row items-center justify-between gap-10 text-center md:text-left">
+    <div
+      class="container mx-auto px-6 lg:px-12 relative z-10 flex flex-col md:flex-row items-center justify-between gap-10 text-center md:text-left">
       <div class="flex flex-col md:flex-row items-center gap-6">
-        <router-link to="/" class="text-2xl font-display font-bold tracking-tighter text-white">
-          J<span class="text-primary">TX</span><span class="text-white/50">21</span>
+        <router-link to="/"
+          class="text-2xl font-display font-bold tracking-tighter text-white group flex items-center gap-1">
+          J<span class="text-primary group-hover:text-secondary transition-colors duration-500">TX</span><span
+            class="text-white/50">21</span>
         </router-link>
         <div class="h-px w-8 bg-white/10 hidden md:block"></div>
         <span class="text-sm font-medium text-slate-500 tracking-wide font-sans">
@@ -12,20 +15,14 @@
       </div>
 
       <div class="flex gap-8 items-center">
-        <a 
-          v-for="social in socials" 
-          :key="social.label"
-          :href="social.href" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          class="text-slate-500 hover:text-primary transition-all duration-300 hover:scale-110"
-        >
+        <a v-for="social in socials" :key="social.label" :href="social.href" target="_blank" rel="noopener noreferrer"
+          class="text-slate-500 hover:text-primary transition-all duration-300 hover:scale-110">
           <component :is="social.icon" class="w-6 h-6" />
           <span class="sr-only">{{ social.label }}</span>
         </a>
       </div>
     </div>
-    
+
     <!-- Subtle glow -->
     <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-primary/5 rounded-full blur-[80px] pointer-events-none"></div>
   </footer>
