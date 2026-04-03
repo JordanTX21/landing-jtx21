@@ -1,6 +1,5 @@
 <template>
-  <div class="min-h-screen flex flex-col selection:bg-primary-500/30 selection:text-primary-100">
-    <!-- Navbar could go here if we want a global nav -->
+  <div class="min-h-screen flex flex-col selection:bg-primary/30 selection:text-primary">
     <Header />
     <main class="flex-grow">
       <router-view />

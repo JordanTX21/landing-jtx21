@@ -12,11 +12,12 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@vueuse/motion": "^3.0.3",
+    "lucide-vue-next": "^0.358.0",
     "pinia": "^2.1.7",
     "vee-validate": "^4.12.5",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0",
-    "lucide-vue-next": "^0.358.0"
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",

@@ -3,36 +3,51 @@
 @tailwind utilities;
 
 @layer base {
-  /* Force Vite HMR to rebuild tailwind config */
   body {
-    @apply bg-dark-900 text-slate-300;
+    @apply bg-surface text-slate-300 selection:bg-primary/30 selection:text-primary;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
   }
 }
 
 @layer utilities {
   .glass {
-    @apply bg-dark-800/60 backdrop-blur-md border border-slate-700/50;
+    @apply bg-surface-highest/40 backdrop-blur-[20px] border border-white/[0.05];
+  }
+  
+  .ghost-border {
+    @apply border border-white/[0.15] hover:border-white/[0.4] transition-colors duration-300;
+  }
+
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary;
+  }
+  
+  .glow-on-hover {
+    @apply hover:shadow-glow-primary hover:shadow-primary/20 transition-all duration-300;
   }
 }
 
-/* Custom Scrollbar for a premium feel */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-dark-900;
+  @apply bg-surface-lowest;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-700 rounded-full;
+  @apply bg-surface-highest rounded-full border-2 border-surface-lowest;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary-500;
+  @apply bg-primary;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  @apply antialiased;
 }
