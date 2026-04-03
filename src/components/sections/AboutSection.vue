@@ -18,6 +18,7 @@
                   <div
                     class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-8 border border-primary/30">
                     <UserIcon class="w-12 h-12 text-primary" />
+                    <img src="/profile.png" alt="profile" class="rounded-full">
                   </div>
                   <h3 class="text-3xl font-display font-bold text-white mb-4">{{ profileData.name }}</h3>
                   <p class="text-secondary font-semibold uppercase tracking-widest text-sm mb-6">Tech Lead • Backend
