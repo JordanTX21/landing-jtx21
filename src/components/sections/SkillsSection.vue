@@ -11,7 +11,7 @@
           :initial="{ opacity: 0, y: 30 }"
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
         >
-          Technical <span class="text-gradient">Expertise</span>
+          {{ t.skills.titleTop }} <span class="text-gradient">{{ t.skills.titleHighlight }}</span>
         </h2>
         <p 
           class="text-slate-400 max-w-2xl mx-auto text-lg font-sans leading-relaxed"
@@ -19,13 +19,13 @@
           :initial="{ opacity: 0, y: 20 }"
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 600, delay: 200 } }"
         >
-          A balanced skill set bridging scalable backend infrastructure with dynamic frontend and moving into mobile via Flutter.
+          {{ t.skills.subtitle }}
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
         <div 
-          v-for="(category, idx) in skills" 
+          v-for="(category, idx) in t.skills.categories" 
           :key="category.name" 
           class="glass rounded-3xl p-8 transition-all duration-500 hover:-translate-y-2 group relative overflow-hidden ghost-border"
           v-motion
@@ -65,5 +65,7 @@
 </template>
 
 <script setup lang="ts">
-import { skills } from '@/data/skills'
+import { useContent } from '@/composables/useContent'
+
+const { t } = useContent()
 </script>

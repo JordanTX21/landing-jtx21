@@ -26,25 +26,24 @@
           <div
             class="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-primary text-sm font-medium tracking-wide ghost-border">
             <span class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(71,214,255,1)]"></span>
-            {{ profileData.availability || 'Available for new opportunities' }}
+            {{ t.hero.availability }}
           </div>
 
           <h1 class="text-5xl md:text-8xl font-display font-bold leading-[1.1] mb-8">
-            <span class="block text-white">Building Resilient</span>
-            <span class="text-gradient drop-shadow-[0_0_30px_rgba(71,214,255,0.3)]">Backend Systems</span>
-            <span class="block text-white/90">& APIs</span>
+            <span class="block text-white">{{ t.hero.titleLine1 }}</span>
+            <span class="text-gradient drop-shadow-[0_0_30px_rgba(71,214,255,0.3)]">{{ t.hero.titleHighlight }}</span>
+            <span class="block text-white/90">{{ t.hero.titleLine3 }}</span>
           </h1>
 
           <p class="text-lg md:text-xl text-slate-400 mb-12 max-w-xl leading-relaxed font-sans">
-            {{ profileData.role }} specializing in creating clean, scalable architectures with <span
-              class="text-secondary font-medium">Laravel</span> and modern <span
-              class="text-secondary font-medium">Vue.js</span> interfaces.
+            {{ t.hero.intro }} <span
+              class="text-secondary font-medium">{{ t.hero.introWith }}</span> {{ t.hero.introAnd }} {{ t.hero.introEnd }}
           </p>
 
           <div class="flex flex-col sm:flex-row gap-6">
             <a href="#contact"
               class="px-10 py-5 rounded-full font-bold bg-primary text-surface hover:scale-105 active:scale-95 transition-all shadow-glow-primary-lg flex items-center justify-center gap-3 group overflow-hidden relative">
-              <span class="relative z-10">Get in touch</span>
+              <span class="relative z-10">{{ t.hero.ctaContact }}</span>
               <ArrowRightIcon class="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
               <!-- Button Glow Effect -->
               <div
@@ -54,14 +53,14 @@
 
             <a href="#experience"
               class="px-10 py-5 rounded-full font-bold bg-surface-highest/50 text-white border border-white/10 hover:bg-surface-highest hover:border-white/20 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3 backdrop-blur-md">
-              View Projects
+              {{ t.hero.ctaExperience }}
               <CodeIcon class="w-5 h-5 text-primary" />
             </a>
           </div>
 
           <!-- Quick Stats / Labels -->
           <div class="mt-16 grid grid-cols-3 gap-8 pt-8 border-t border-white/5 max-w-md">
-            <div v-for="stat in stats" :key="stat.label" class="flex flex-col">
+            <div v-for="stat in t.hero.stats" :key="stat.label" class="flex flex-col">
               <span class="text-2xl font-display font-bold text-white">{{ stat.value }}</span>
               <span class="text-xs uppercase tracking-widest text-slate-500 font-semibold">{{ stat.label }}</span>
             </div>
@@ -79,7 +78,7 @@
             </div>
 
             <!-- Float animation on image -->
-            <img src="/3d_developer_character.png" alt="Developer Character"
+            <img :src="characterImg" alt="Jordan Noblejas 3D character" width="500" height="500"
               class="w-full max-w-[500px] mx-auto animate-float drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-20 relative pointer-events-none" />
 
             <!-- Floating Tech Badges -->
@@ -124,13 +123,10 @@ import {
   DatabaseIcon,
   LayersIcon
 } from 'lucide-vue-next'
-import { profileData } from '@/data/profile'
+import { useContent } from '@/composables/useContent'
 
-const stats = [
-  { label: 'Experience', value: '5+ Yrs' },
-  { label: 'Projects', value: '25+' },
-  { label: 'Systems Built', value: '10+' },
-]
+const { t } = useContent()
+const characterImg = `${import.meta.env.BASE_URL}3d_developer_character.png`
 
 const techBadges = [
   { name: 'Laravel', icon: ServerIcon, pos: { top: '10%', left: '-5%' } },

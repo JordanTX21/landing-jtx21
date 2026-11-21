@@ -3,14 +3,14 @@
     <div
       class="container mx-auto px-6 lg:px-12 relative z-10 flex flex-col md:flex-row items-center justify-between gap-10 text-center md:text-left">
       <div class="flex flex-col md:flex-row items-center gap-6">
-        <router-link to="/"
+        <router-link :to="locale === 'es' ? '/es/' : '/'"
           class="text-2xl font-display font-bold tracking-tighter text-white group flex items-center gap-1">
           J<span class="text-primary group-hover:text-secondary transition-colors duration-500">TX</span><span
             class="text-white/50">21</span>
         </router-link>
         <div class="h-px w-8 bg-white/10 hidden md:block"></div>
         <span class="text-sm font-medium text-slate-500 tracking-wide font-sans">
-          &copy; {{ new Date().getFullYear() }} Jordan Noblejas. Built with Resilience.
+          &copy; {{ new Date().getFullYear() }} Jordan Noblejas. {{ t.footer.tagline }}
         </span>
       </div>
 
@@ -31,6 +31,9 @@
 <script setup lang="ts">
 import { Github as GithubIcon, Linkedin as LinkedinIcon, Mail as MailIcon } from 'lucide-vue-next'
 import { profileData } from '@/data/profile'
+import { useContent } from '@/composables/useContent'
+
+const { t, locale } = useContent()
 
 const socials = [
   { label: 'GitHub', href: profileData.github, icon: GithubIcon },

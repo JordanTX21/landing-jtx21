@@ -16,20 +16,19 @@
           <div class="lg:sticky lg:top-32">
             <h2 class="text-4xl md:text-7xl font-display font-bold text-white mb-8 leading-tight" v-motion
               :initial="{ opacity: 0, x: -30 }" :visible-once="{ opacity: 1, x: 0, transition: { duration: 600 } }">
-              <span class="text-gradient">Experience</span> <br />
-              & Impact
+              <span class="text-gradient">{{ t.experience.titleHighlight }}</span> <br />
+              {{ t.experience.titleBottom }}
             </h2>
             <p class="text-slate-400 text-lg leading-relaxed mb-12 font-sans" v-motion :initial="{ opacity: 0, x: -30 }"
               :visible-once="{ opacity: 1, x: 0, transition: { duration: 600, delay: 200 } }">
-              A selection of systems and technical decisions that reflect my evolution from backend development to
-              leading architecture and scalable solutions in ERP and logistics environments.
+              {{ t.experience.subtitle }}
             </p>
 
             <div class="hidden lg:flex flex-col gap-6" v-motion :initial="{ opacity: 0, scale: 0.9 }"
               :visible-once="{ opacity: 1, scale: 1, transition: { duration: 600, delay: 400 } }">
               <div class="glass p-6 rounded-2xl ghost-border overflow-hidden">
-                <p class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Core Philosophy</p>
-                <p class="text-white font-medium italic">"{{ profileData.philosophy }}"</p>
+                <p class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">{{ t.experience.philosophyLabel }}</p>
+                <p class="text-white font-medium italic">"{{ t.philosophy }}"</p>
               </div>
             </div>
           </div>
@@ -42,7 +41,7 @@
             class="absolute left-0 lg:-left-10 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-secondary/20 to-transparent hidden lg:block">
           </div>
 
-          <div v-for="(job, index) in experiences" :key="index" class="relative group" v-motion
+          <div v-for="(job, index) in t.experience.items" :key="index" class="relative group" v-motion
             :initial="{ opacity: 0, y: 50 }"
             :visible-once="{ opacity: 1, y: 0, transition: { duration: 800, delay: index * 150 } }">
             <!-- Timeline Node (Hidden on mobile) -->
@@ -102,6 +101,7 @@
 </template>
 
 <script setup lang="ts">
-import { experiences } from '@/data/experience'
-import { profileData } from '@/data/profile';
+import { useContent } from '@/composables/useContent'
+
+const { t } = useContent()
 </script>

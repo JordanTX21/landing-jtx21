@@ -10,7 +10,7 @@
     :enter="{ opacity: 1, y: 0, transition: { duration: 600 } }"
   >
     <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
-      <router-link to="/" class="text-3xl font-display font-bold tracking-tighter text-white group flex items-center gap-1">
+      <router-link :to="locale === 'es' ? '/es/' : '/'" class="text-3xl font-display font-bold tracking-tighter text-white group flex items-center gap-1">
         J<span class="text-primary group-hover:text-secondary transition-colors duration-500">TX</span><span class="text-white/50">21</span>
       </router-link>
 
@@ -29,18 +29,35 @@
           href="#contact" 
           class="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-primary font-bold hover:bg-primary hover:text-surface transition-all duration-300 ghost-border glow-on-hover uppercase tracking-widest text-xs"
         >
-          Let's Talk
+          {{ t.nav.talk }}
         </a>
+        <router-link
+          :to="otherPath"
+          :aria-label="locale === 'en' ? 'Ver en español' : 'View in English'"
+          class="text-sm font-bold text-slate-400 hover:text-primary transition-colors tracking-widest uppercase"
+        >
+          {{ t.nav.switchTo }}
+        </router-link>
       </nav>
 
-      <!-- Mobile Nav Toggle -->
-      <button 
-        @click="isOpen = !isOpen" 
+            <!-- Mobile Nav Toggle -->
+      <div class="lg:hidden flex items-center gap-4">
+      <router-link
+        :to="otherPath"
+        :aria-label="locale === 'en' ? 'Ver en español' : 'View in English'"
+        class="text-sm font-bold text-slate-300 hover:text-primary transition-colors tracking-widest uppercase"
+      >
+        {{ t.nav.switchTo }}
+      </router-link>
+      <button
+        @click="isOpen = !isOpen"
+        :aria-label="isOpen ? 'Close menu' : 'Open menu'"
         class="lg:hidden w-12 h-12 flex items-center justify-center rounded-2xl glass ghost-border text-white hover:text-primary transition-colors"
       >
         <MenuIcon v-if="!isOpen" class="w-6 h-6" />
         <XIcon v-else class="w-6 h-6" />
       </button>
+      </div>
     </div>
 
     <!-- Mobile Menu -->
@@ -70,7 +87,7 @@
           @click="isOpen = false" 
           class="px-12 py-4 rounded-full bg-primary text-surface font-bold hover:scale-105 active:scale-95 transition-all shadow-glow-primary"
         >
-          Let's Talk
+          {{ t.nav.talk }}
         </a>
       </div>
     </Transition>
@@ -78,18 +95,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { Menu as MenuIcon, X as XIcon } from 'lucide-vue-next'
+import { useContent } from '@/composables/useContent'
+
+const { t, locale, otherPath } = useContent()
 
 const isOpen = ref(false)
 const scrolled = ref(false)
 
-const links = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Education', href: '#education' },
-]
+const links = computed(() => [
+  { label: t.value.nav.about, href: '#about' },
+  { label: t.value.nav.skills, href: '#skills' },
+  { label: t.value.nav.experience, href: '#experience' },
+  { label: t.value.nav.projects, href: '#projects' },
+  { label: t.value.nav.education, href: '#education' },
+])
 
 const handleScroll = () => {
   scrolled.value = window.scrollY > 20

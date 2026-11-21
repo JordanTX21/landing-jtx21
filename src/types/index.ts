@@ -24,3 +24,19 @@ export interface Education {
   date: string
   description: string
 }
+
+export interface Project {
+  name: string
+  url: string
+  description: string
+  highlights: string[]
+  tags: string[]
+}
+
+export interface ArchitecturePractice {
+  title: string
+  description: string
+  icon: any
+  color: string
+  snippet: string
+}

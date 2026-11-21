@@ -1,19 +1,19 @@
 <template>
-  <section id="education" class="py-24 bg-surface relative overflow-hidden">
+  <section class="py-24 bg-surface relative overflow-hidden">
     <!-- Subtle glow background -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
 
     <div class="container mx-auto px-6 lg:px-12 relative z-10">
       <div class="flex flex-col mb-16" v-motion :initial="{ opacity: 0, x: -30 }" :visible-once="{ opacity: 1, x: 0, transition: { duration: 600 } }">
         <h2 class="text-4xl md:text-6xl font-display font-bold text-white mb-4">
-          Academic <span class="text-gradient">Formation</span>
+          {{ t.education.titleTop }} <span class="text-gradient">{{ t.education.titleHighlight }}</span>
         </h2>
         <div class="w-20 h-1.5 bg-primary rounded-full group-hover:w-32 transition-all duration-500"></div>
       </div>
 
       <div class="grid grid-cols-1 gap-10 max-w-5xl">
         <div 
-          v-for="(item, index) in education" 
+          v-for="(item, index) in t.education.items" 
           :key="index"
           class="glass rounded-[2rem] p-10 md:p-14 ghost-border group hover:bg-surface-highest/40 transition-all duration-700 relative overflow-hidden"
           v-motion
@@ -65,5 +65,7 @@ import {
   Building as BuildingIcon,
   Calendar as CalendarIcon
 } from 'lucide-vue-next'
-import { education } from '@/data/education'
+import { useContent } from '@/composables/useContent'
+
+const { t } = useContent()
 </script>

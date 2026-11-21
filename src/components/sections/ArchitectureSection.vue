@@ -3,17 +3,17 @@
     <div class="container mx-auto px-6 lg:px-12 max-w-5xl">
       <div class="mb-16 text-center">
         <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
-          Software <span class="text-primary-500">Architecture</span>
+          {{ t.architecture.titleTop }} <span class="text-primary-500">{{ t.architecture.titleHighlight }}</span>
         </h2>
         <div class="w-16 h-1 bg-primary-500 rounded mx-auto mb-6"></div>
         <p class="text-slate-400 text-lg max-w-2xl mx-auto">
-          Differentiating from junior approaches by establishing clean, decoupled, and highly performant standards across the stack.
+          {{ t.architecture.subtitle }}
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
-        <div v-for="practice in practices" :key="practice.title" 
+        <div v-for="practice in t.architecture.practices" :key="practice.title" 
              class="glass rounded-2xl p-8 hover:bg-slate-800/80 transition-all border-l-4"
              :class="practice.color">
           
@@ -39,5 +39,7 @@
 </template>
 
 <script setup lang="ts">
-import { practices } from '@/data/architecture'
+import { useContent } from '@/composables/useContent'
+
+const { t } = useContent()
 </script>
