@@ -83,7 +83,7 @@ const en: Content = {
     stats: [
       { value: '5+ yrs', label: 'Experience' },
       { value: '12', label: 'Devs led' },
-      { value: '3,000+', label: 'MRs merged' },
+      { value: '3,000+', label: 'Own MRs merged' },
     ],
   },
   about: {
@@ -92,7 +92,7 @@ const en: Content = {
     titleHighlight: 'Me',
     expBadge: '5+ YRS EXP',
     description:
-      'Systems Engineer with 5+ years building and running production systems for Shalom, one of Peru’s largest courier companies: logistics, courier, bus ticketing, payments and ERP. Since 2025 I have been the technical lead of a 12-developer team, working closely with QA and project managers.',
+      'Software engineer with 5+ years building and running production systems for Shalom, one of Peru’s largest courier companies: logistics, courier, bus ticketing, payments and ERP. Since 2025 I have been the technical lead of a 12-developer team, working closely with QA and project managers.',
     card1Title: 'API & Backend Design',
     card1Text:
       'Laravel APIs designed API-first, legacy migrations to Laravel 13 / PHP 8.4 with parity testing, and query tuning on tables with hundreds of millions of rows.',
@@ -143,7 +143,7 @@ const en: Content = {
         icon: skillIcons.tools,
         items: [
           { name: 'GitLab CI & Docker', desc: 'Team-wide templates' },
-          { name: 'Linux, Nginx, PHP-FPM', desc: 'Teleport, Zabbix, DigitalOcean' },
+          { name: 'Linux, Nginx, PHP-FPM', desc: 'Teleport, DigitalOcean' },
           { name: 'Integrations', desc: 'Culqi 3DS, Niubiz, Nubefact, GA4' },
           { name: 'Applied AI', desc: 'Claude Code, MCP servers, agents, local LLMs' },
         ],
@@ -165,12 +165,13 @@ const en: Content = {
           'Technical lead for 12 developers, coordinating with 5 QA engineers and 5 project managers on Shalom’s logistics, courier, ticketing and payment systems.',
         highlights: [
           'Assess the technical and performance impact of every requirement and validate whether QA findings are in scope.',
-          'Review and merge the team’s code on a custom Git flow: 3,000+ MRs merged in 2025–2026 across 80+ repositories.',
-          'Lead legacy API migrations (PHP 5 / Laravel 5.8) to Laravel 13 and PHP 8.4, with parity tests before each release.',
+          'Review and merge the team’s code on a custom Git flow: 3,000+ of my own MRs merged in 2025–2026 across 80+ repositories.',
+          'Lead legacy API migrations (Laravel 5.8) to Laravel 13 and PHP 8.4, with parity tests before each release.',
           'Production performance fixes: endpoints from 32.7 s to 1.2 s; database connections from 1,001 to 31 with APIs at ~0.1 s.',
-          'Built the ShalomBus ticket-sales web app from scratch (Vue 3, TypeScript, Pinia, Tailwind v4) with Culqi 3DS payments.',
+          'Started the ShalomBus ticket-sales web app, designed its architecture (Vue 3, TypeScript, Pinia, Tailwind v4), built several views and wrote most of the Laravel APIs it consumes, with Culqi 3DS payments.',
           'Built an MCP server connecting the task ERP and GitLab to Claude Code, with agents for managers, developers, QA and the tech lead.',
-          'Standardized infrastructure: GitLab CI and Docker templates, a Laravel API starter, a standards portal, Teleport and Zabbix.',
+          'Standardized infrastructure: GitLab CI and Docker templates, a Laravel API starter, a standards portal, Teleport, and the migration of the self-hosted GitLab to version 19.',
+          'Extended Shalom’s public customer website: complaints book, GA4 and anti-scraping.',
         ],
         tags: ['Leadership', 'Laravel 13', 'Vue 3', 'GitLab CI', 'Docker', 'MCP / AI'],
       },
@@ -181,7 +182,7 @@ const en: Content = {
         description:
           'Full stack and mobile developer on Shalom’s logistics and courier platforms.',
         highlights: [
-          'Lead developer of Shalom’s public customer website (Vue): shipping quotes, tracking, complaints book, GA4 and anti-scraping.',
+          'Lead developer of Shalom’s public customer website (Vue): shipping rate quotes and tracking.',
           'API-first REST services in Laravel and Vue 2 / Vue 3 frontends for logistics platforms.',
           'Flutter apps for field operations: cargo control, drivers, tracking and affiliates.',
           'Custom ERPNext / Frappe workflows, QR payments and electronic invoicing.',
@@ -214,16 +215,17 @@ const en: Content = {
         description:
           'A personal logistics system (shipments, payments, branches and customers) built to showcase clean architecture.',
         highlights: [
-          'Laravel 13 backend with DDD modules, JWT auth, RBAC, idempotent orders and the outbox pattern.',
+          'Laravel 13 backend with DDD modules, Sanctum auth, RBAC, idempotent orders and the outbox pattern.',
           'Vue 3 + TypeScript modular-monolith frontend with OpenAPI-generated types, Vitest and Playwright.',
+          'Four offline-first Flutter apps (warehouse, fleet, last mile and attendance) with an encrypted local database and an idempotent sync engine.',
         ],
-        tags: ['Laravel 13', 'DDD', 'Vue 3', 'TypeScript', 'OpenAPI'],
+        tags: ['Laravel 13', 'DDD', 'Vue 3', 'TypeScript', 'OpenAPI', 'Flutter'],
       },
       {
         name: 'llama-scripts',
         url: 'https://github.com/JordanTX21/llama-sripts',
         description:
-          'Scripts and presets to run local LLM servers with llama.cpp (CUDA) on Windows and Linux; my daily local coding assistant.',
+          'Scripts and presets to run local LLM servers with llama.cpp (CUDA) on Windows and Linux; my local coding assistant.',
         highlights: ['Shared presets per model, environment-based configuration and generic launchers.'],
         tags: ['llama.cpp', 'Local LLMs', 'Shell'],
       },
@@ -234,11 +236,11 @@ const en: Content = {
     titleHighlight: 'Background',
     items: [
       {
-        title: 'Systems Engineering (graduate)',
+        title: 'Systems Engineering (coursework completed)',
         institution: 'Universidad Nacional Tecnológica de Lima Sur (UNTELS)',
         date: '2018 – 2024',
         description:
-          'Bachelor’s degree in progress: only the English language requirement remains, currently enrolled.',
+          'Bachelor’s degree pending only the English language requirement, currently enrolled.',
       },
     ],
   },
@@ -316,7 +318,7 @@ const es: Content = {
     stats: [
       { value: '5+ años', label: 'Experiencia' },
       { value: '12', label: 'Devs a cargo' },
-      { value: '3 000+', label: 'MRs integrados' },
+      { value: '3 000+', label: 'MRs propios' },
     ],
   },
   about: {
@@ -325,7 +327,7 @@ const es: Content = {
     titleHighlight: 'mí',
     expBadge: '5+ AÑOS EXP',
     description:
-      'Ingeniero de Sistemas con más de 5 años construyendo y operando sistemas en producción para Shalom, una de las mayores empresas de courier del Perú: logística, courier, venta de pasajes, pagos y ERP. Desde 2025 lidero técnicamente a un equipo de 12 desarrolladores, coordinando con QA y gestión.',
+      'Egresado de Ingeniería de Sistemas con más de 5 años construyendo y operando sistemas en producción para Shalom, una de las mayores empresas de courier del Perú: logística, courier, venta de pasajes, pagos y ERP. Desde 2025 lidero técnicamente a un equipo de 12 desarrolladores, coordinando con QA y gestión.',
     card1Title: 'APIs y backend',
     card1Text:
       'APIs en Laravel con enfoque API-first, migraciones de legacy a Laravel 13 / PHP 8.4 con pruebas de paridad y optimización de consultas sobre tablas de cientos de millones de filas.',
@@ -376,7 +378,7 @@ const es: Content = {
         icon: skillIcons.tools,
         items: [
           { name: 'GitLab CI y Docker', desc: 'Plantillas para todo el equipo' },
-          { name: 'Linux, Nginx, PHP-FPM', desc: 'Teleport, Zabbix, DigitalOcean' },
+          { name: 'Linux, Nginx, PHP-FPM', desc: 'Teleport, DigitalOcean' },
           { name: 'Integraciones', desc: 'Culqi 3DS, Niubiz, Nubefact, GA4' },
           { name: 'IA aplicada', desc: 'Claude Code, servidores MCP, agentes, LLMs locales' },
         ],
@@ -398,12 +400,13 @@ const es: Content = {
           'Lidero técnicamente a 12 desarrolladores y coordino con 5 QA y 5 gestores en los sistemas de logística, courier, pasajes y pagos de Shalom.',
         highlights: [
           'Estimo el impacto técnico y de rendimiento de cada requerimiento y valido si las observaciones de QA están dentro del alcance.',
-          'Reviso e integro el código del equipo con un Git flow propio: más de 3 000 MRs integrados en 2025–2026 en más de 80 repositorios.',
-          'Lidero la migración de APIs legacy (PHP 5 / Laravel 5.8) a Laravel 13 y PHP 8.4, con pruebas de paridad antes de cada pase.',
+          'Reviso e integro el código del equipo con un Git flow propio: más de 3 000 MRs propios integrados en 2025–2026 en más de 80 repositorios.',
+          'Lidero la migración de APIs legacy (Laravel 5.8) a Laravel 13 y PHP 8.4, con pruebas de paridad antes de cada pase.',
           'Optimización en producción: endpoints de 32,7 s a 1,2 s; conexiones de BD de 1 001 a 31 con APIs en ~0,1 s.',
-          'Construí desde cero la web de venta de pasajes de ShalomBus (Vue 3, TypeScript, Pinia, Tailwind v4) con pagos Culqi 3DS.',
+          'Inicié la web de venta de pasajes de ShalomBus, definí su arquitectura (Vue 3, TypeScript, Pinia, Tailwind v4), desarrollé varias vistas e hice la mayor parte de las APIs Laravel que consume, con pagos Culqi 3DS.',
           'Construí un servidor MCP que conecta el ERP de tareas y GitLab con Claude Code, con agentes para gestores, programadores, QA y Tech Lead.',
-          'Estandaricé la infraestructura: plantillas de GitLab CI y Docker, starter de APIs Laravel, portal de estándares, Teleport y Zabbix.',
+          'Estandaricé la infraestructura: plantillas de GitLab CI y Docker, starter de APIs Laravel, portal de estándares, Teleport y migración del GitLab autoalojado a la versión 19.',
+          'Amplié la web pública de clientes de Shalom: libro de reclamaciones, GA4 y anti-scraping.',
         ],
         tags: ['Liderazgo', 'Laravel 13', 'Vue 3', 'GitLab CI', 'Docker', 'MCP / IA'],
       },
@@ -413,7 +416,7 @@ const es: Content = {
         date: 'Oct 2022 – Feb 2025',
         description: 'Desarrollador full stack y móvil en las plataformas de logística y courier de Shalom.',
         highlights: [
-          'Desarrollador principal de la web pública de clientes de Shalom (Vue): cotización, rastreo, libro de reclamaciones, GA4 y anti-scraping.',
+          'Desarrollador principal de la web pública de clientes de Shalom (Vue): cotización de tarifas y rastreo.',
           'APIs REST en Laravel con enfoque API-first y frontends en Vue 2 / Vue 3 para plataformas logísticas.',
           'Apps en Flutter para operaciones de campo: control de carga, choferes, rastreo y afiliados.',
           'Flujos personalizados en ERPNext / Frappe, pagos con QR y facturación electrónica.',
@@ -446,16 +449,17 @@ const es: Content = {
         description:
           'Sistema de logística propio (envíos, pagos, agencias y clientes) para demostrar arquitectura limpia.',
         highlights: [
-          'Backend en Laravel 13 con módulos DDD, JWT, RBAC, órdenes idempotentes y patrón outbox.',
+          'Backend en Laravel 13 con módulos DDD, Sanctum, RBAC, órdenes idempotentes y patrón outbox.',
           'Frontend Vue 3 + TypeScript como monolito modular, con tipos generados desde OpenAPI, Vitest y Playwright.',
+          'Cuatro apps Flutter offline-first (almacén, flota, última milla y asistencia) con base local cifrada y motor de sincronización idempotente.',
         ],
-        tags: ['Laravel 13', 'DDD', 'Vue 3', 'TypeScript', 'OpenAPI'],
+        tags: ['Laravel 13', 'DDD', 'Vue 3', 'TypeScript', 'OpenAPI', 'Flutter'],
       },
       {
         name: 'llama-scripts',
         url: 'https://github.com/JordanTX21/llama-sripts',
         description:
-          'Scripts y presets para levantar servidores de LLMs locales con llama.cpp (CUDA) en Windows y Linux; mi asistente de código local del día a día.',
+          'Scripts y presets para levantar servidores de LLMs locales con llama.cpp (CUDA) en Windows y Linux; mi asistente de código local.',
         highlights: ['Presets por modelo, configuración por variables de entorno y lanzadores genéricos.'],
         tags: ['llama.cpp', 'LLMs locales', 'Shell'],
       },
@@ -469,7 +473,7 @@ const es: Content = {
         title: 'Ingeniería de Sistemas (egresado)',
         institution: 'Universidad Nacional Tecnológica de Lima Sur (UNTELS)',
         date: '2018 – 2024',
-        description: 'Bachiller en trámite: solo falta el requisito de inglés, que estoy cursando.',
+        description: 'Bachiller pendiente solo por el requisito de inglés, que estoy cursando.',
       },
     ],
   },
@@ -513,8 +517,8 @@ const es: Content = {
     ],
   },
   contact: {
-    titleTop: '¿Hablamos',
-    titleHighlight: '?',
+    titleTop: '',
+    titleHighlight: '¿Hablamos?',
     text: '¿Buscas un Tech Lead o Senior Backend Engineer que lidere al equipo sin dejar de programar? Estoy abierto a roles remotos y retos técnicos.',
     email: 'Envíame un correo',
     github: 'Ver GitHub',
